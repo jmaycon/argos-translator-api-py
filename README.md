@@ -4,28 +4,28 @@ Simple REST API for German ↔ English translation using Argos models.
 
 ---
 
-## 🖥️ Option 2: Run Locally
+## Run
 
-### 1. On Linux
+### Option 2: On Linux
 
-UI will be available at http://localhost:30012/
+UI: http://localhost:30012/
 
 ```shell
 chmod +x run_local.sh
 ./run_local.sh
 ```
 
-### 2. On Windows (PowerShell)
+### Option 2: On Windows (PowerShell)
 
-Will be accessible at http://localhost:30013/
+UI: http://localhost:30013/
 
 ```shell
 ./run_local.ps1
 ```
 
-## 🐳 Option 3: Run with Docker Compose
+### Option 3: Run with Docker 🐳
 
-UI will be available at http://localhost:30014/
+UI: http://localhost:30014/
 
 ```shell
 docker build -t argos-translator-api-py .
