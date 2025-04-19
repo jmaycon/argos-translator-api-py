@@ -86,10 +86,6 @@ def perform_translation(request: TranslationRequest):
         logger.error(f"Translation failed:\n" + traceback.format_exc())
         raise HTTPException(status_code=500, detail=f"Translation failed: {str(e)}")
 
-@app.post("/translate-cpu")
+@app.post("/translate")
 def translate_cpu(request: TranslationRequest):
-    return perform_translation(request)
-
-@app.post("/translate-gpu")
-def translate_gpu(request: TranslationRequest):
     return perform_translation(request)
