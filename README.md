@@ -2,18 +2,7 @@
 
 Simple REST API for German ↔ English translation using Argos models.
 
-
-
 ---
-
-## 🐳 Option 1: Run with Docker Compose
-
-UI will be available at http://localhost:30012/
-
-```shell
-docker build -t argos-translator-api-py .
-docker run --rm -p 30014:30012 argos-translator-api-py 
-```
 
 ## 🖥️ Option 2: Run Locally
 
@@ -34,6 +23,15 @@ Will be accessible at http://localhost:30013/
 ./run_local.ps1
 ```
 
+## 🐳 Option 3: Run with Docker Compose
+
+UI will be available at http://localhost:30014/
+
+```shell
+docker build -t argos-translator-api-py .
+docker run --rm -p 30014:8080 argos-translator-api-py 
+```
+
 ---
 
 ## 🔁 API Usage
@@ -44,6 +42,7 @@ To check if CUDA is available run
 source venv/bin/activate
 python -c "import torch; print(torch.cuda.is_available())"
 ```
+
 _For powershell use `.\win-venv\Scripts\Activate.ps1`_
 
 ### POST `/translate-<cpu|gpu>`
@@ -80,6 +79,7 @@ curl -X POST http://localhost:30012/translate-cpu \
   "translation": "Good morning"
 }
 ```
+
 ---
 
 ## 🧩 Models Used
