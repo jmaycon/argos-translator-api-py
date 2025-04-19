@@ -51,7 +51,7 @@ def split_into_sentences(text: str):
     sentences = []
     for paragraph in segmenter.process(text):
         for sentence in paragraph:
-            sentences.append("".join(token.value for token in sentence))
+            sentences.append(" ".join(token.value for token in sentence))
     return sentences
 
 def translate_sentences(sentences, translator):
