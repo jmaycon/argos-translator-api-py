@@ -37,6 +37,12 @@ translation_en_de = lang_en.get_translation(lang_de)
 if translation_de_en is None or translation_en_de is None:
     raise RuntimeError("One or both translation directions could not be loaded correctly.")
 
+# Warm-up translations to reduce latency on first real request
+logger.info("Warming up translation engine...")
+translation_de_en.translate("Hallo Welt")
+translation_en_de.translate("Hello world")
+logger.info("Warm-up complete.")
+
 class TranslationRequest(BaseModel):
     text: str
     direction: str  # "de-en" or "en-de"
