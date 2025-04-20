@@ -1,6 +1,13 @@
-# Argos Translator German ↔ English
+# ArgosOpenTech Translator German ↔ English
 
 Simple REST API for German ↔ English translation using Argos models.
+
+
+| Repository                                                                                    | Speed                                  | Translation Quality | Notes                                         |
+|-----------------------------------------------------------------------------------------------|----------------------------------------|---------------------|-----------------------------------------------|
+| [facebook-nllb-translator-api-py](https://github.com/jmaycon/facebook-nllb-translator-api-py) | 🚶‍♂️ Slowest                          | ✅ Best              | Accurate translations, but slower performance |
+| [marian-translator-api-py](https://github.com/jmaycon/marian-translator-api-py)               | 🏃 Faster than NLLB, slower than Argos | 👍 Good             | Balanced between quality and speed            |
+| [argos-translator-api-py](https://github.com/jmaycon/argos-translator-api-py)                 | ⚡ Fastest                              | ⚠️ Lower            | Extremely fast but less accurate              |
 
 ---
 
