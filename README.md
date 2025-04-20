@@ -2,6 +2,7 @@
 
 Simple REST API for German ↔ English translation using Argos models.
 
+## Model Comparisons
 
 | Repository                                                                                    | Speed                                  | Translation Quality | Notes                                         |
 |-----------------------------------------------------------------------------------------------|----------------------------------------|---------------------|-----------------------------------------------|
@@ -9,6 +10,7 @@ Simple REST API for German ↔ English translation using Argos models.
 | [marian-translator-api-py](https://github.com/jmaycon/marian-translator-api-py)               | 🏃 Faster than NLLB, slower than Argos | 👍 Good             | Balanced between quality and speed            |
 | [argos-translator-api-py](https://github.com/jmaycon/argos-translator-api-py)                 | ⚡ Fastest                              | ⚠️ Lower            | Extremely fast but less accurate              |
 
+<img src="docs/imgs/comparison-translators.png" alt="comparison" width="300"/>
 ---
 
 ## Run
