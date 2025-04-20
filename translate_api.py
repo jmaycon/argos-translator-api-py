@@ -47,11 +47,13 @@ class TranslationRequest(BaseModel):
     text: str
     direction: str  # "de-en" or "en-de"
 
+# Sentence splitting
 def split_into_sentences(text: str):
     sentences = []
     for paragraph in segmenter.process(text):
         for sentence in paragraph:
-            sentences.append(" ".join(token.value for token in sentence))
+            sentence_text = "".join(token.spacing + token.value for token in sentence)
+            sentences.append(sentence_text)
     return sentences
 
 def translate_sentences(sentences, translator):
