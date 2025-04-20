@@ -36,16 +36,9 @@ UI: http://localhost:30002/
 
 ## 🔁 API Usage
 
-To check if CUDA is available run
+It seems Argos Translate is built on top of CTranslate2, which does support GPU execution.
 
-```shell
-source venv/bin/activate
-python -c "import torch; print(torch.cuda.is_available())"
-```
-
-_For powershell use `.\win-venv\Scripts\Activate.ps1`_
-
-### POST `/translate-<cpu|gpu>`
+### POST `/translate`
 
 Translate text between German and English.
 
@@ -59,7 +52,7 @@ Translate text between German and English.
 1.German to English
 
 ```shell
-curl -X POST http://localhost:30000/translate-cpu \
+curl -X POST http://localhost:30000/translate \
       -H "Content-Type: application/json" \
       -d '{"text": "Guten Morgen", "direction": "de-en"}'
 ```
@@ -67,7 +60,7 @@ curl -X POST http://localhost:30000/translate-cpu \
 - 2.English to German
 
 ```shell
-curl -X POST http://localhost:30000/translate-cpu \
+curl -X POST http://localhost:30000/translate \
       -H "Content-Type: application/json" \
       -d '{"text": "Hi my friend", "direction": "en-de"}'
 ```
