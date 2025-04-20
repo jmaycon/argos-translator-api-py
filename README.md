@@ -6,9 +6,18 @@ Simple REST API for German ↔ English translation using Argos models.
 
 ## Run
 
+### Option 1: Run with Docker 🐳
+
+UI: http://localhost:30000/
+
+```shell
+docker build -t argos-translator-api-py .
+docker run --rm -p 30000:8080 argos-translator-api-py 
+```
+
 ### Option 2: On Linux
 
-UI: http://localhost:30012/
+UI: http://localhost:30001/
 
 ```shell
 chmod +x run_local.sh
@@ -17,19 +26,10 @@ chmod +x run_local.sh
 
 ### Option 2: On Windows (PowerShell)
 
-UI: http://localhost:30013/
+UI: http://localhost:30002/
 
 ```shell
 ./run_local.ps1
-```
-
-### Option 3: Run with Docker 🐳
-
-UI: http://localhost:30014/
-
-```shell
-docker build -t argos-translator-api-py .
-docker run --rm -p 30014:8080 argos-translator-api-py 
 ```
 
 ---
@@ -59,7 +59,7 @@ Translate text between German and English.
 1.German to English
 
 ```shell
-curl -X POST http://localhost:30012/translate-cpu \
+curl -X POST http://localhost:30000/translate-cpu \
       -H "Content-Type: application/json" \
       -d '{"text": "Guten Morgen", "direction": "de-en"}'
 ```
@@ -67,7 +67,7 @@ curl -X POST http://localhost:30012/translate-cpu \
 - 2.English to German
 
 ```shell
-curl -X POST http://localhost:30012/translate-cpu \
+curl -X POST http://localhost:30000/translate-cpu \
       -H "Content-Type: application/json" \
       -d '{"text": "Hi my friend", "direction": "en-de"}'
 ```

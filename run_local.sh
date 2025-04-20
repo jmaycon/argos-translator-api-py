@@ -35,4 +35,4 @@ python -c "import translation_models; translation_models.install()"
 echo "============================================================="
 echo "Starting FastAPI server..."
 echo "============================================================="
-uvicorn translate_api:app --host 0.0.0.0 --port 30012
+uvicorn translate_api:app --host 0.0.0.0 --port 30001
